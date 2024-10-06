@@ -44,16 +44,13 @@ msg = train.equal_headers(test)
 if msg is not None:
     raise Exception(msg)
 
-# build classifier
-helper.print_info("Build BR classifier on %s" % train_file)
+# configure classifier
 br = MultiLabelClassifier(classname="meka.classifiers.multilabel.BR")
-br.build_classifier(train)
 
-# evaluate on test
+# train and evaluate
+helper.print_info("Build BR classifier on %s" % train_file)
 helper.print_info("Evaluate BR classifier on %s" % test_file)
-top = "PCut1"
-vop = "3"
-result = Evaluation.evaluate_model(br, train, test, top, vop)
+result = Evaluation.evaluate_model(br, train, test, top="PCut1", vop="3")
 print(result)
 
 jvm.stop()
