@@ -35,7 +35,7 @@ data = load_any_file(data_file)
 prepare_data(data)
 
 # build classifier
-helper.print_info("Build BR classifier")
+helper.print_info("Build BRUpdateable classifier")
 br = MultiLabelClassifier(classname="meka.classifiers.multilabel.incremental.BRUpdateable")
 br.build_classifier(data.copy_structure())
 for inst in data:
