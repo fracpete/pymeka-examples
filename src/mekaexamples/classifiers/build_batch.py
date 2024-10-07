@@ -11,7 +11,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# just_build.py
+# build_batch.py
 # Copyright (C) 2024 Fracpete (fracpete at waikato dot ac dot nz)
 
 import os
